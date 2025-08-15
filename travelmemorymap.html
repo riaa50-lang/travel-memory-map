@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Memory Map</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style1.css">
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Travel Memory Map</h1>
+        <p>Click on the map to select location for memory</p>
+    </header>
+
+    <div style="display: flex; gap: 20px;">
+        <!-- Sidebar -->
+        <div style="width: 20%;">
+            <h2>Add Travel Memory</h2>
+            <input type="text" id="memoryPlace" placeholder="Place Name">
+            <input type="file" id="memoryImage" accept="image/*">
+            <textarea id="memoryNote" placeholder="Write a short note..."></textarea>
+            <button onclick="addMemory()">Add Memory</button>
+            <hr>
+            <input type="text" id="searchBox" placeholder="Search place...">
+            <button onclick="searchPlace()">Search</button>
+            <br><br>
+            <button onclick="findMe()">📍 Where Am I?</button>
+        </div>
+
+        <!-- Map -->
+        <div id="map" style="width: 80%; height: 500px;"></div>
+    </div>
+
+    <footer>
+        <p>© 2025 Travel Map Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
